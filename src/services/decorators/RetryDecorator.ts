@@ -1,4 +1,4 @@
-import get from 'lodash.get'
+import get from '../../utils/get'
 import { StatusCodes } from '../http/StatusCodes'
 import IDecorator from './IDecorator'
 
@@ -35,7 +35,7 @@ export default class RetryDecorator implements IDecorator {
             break
           }
 
-          const statusCode: number = get(e, 'code', 0)
+          const statusCode: number = ((e as Record<string, unknown>).code as number) ?? 0
           console.error(statusCode)
           if (statusCode >= StatusCodes.MinServerError && statusCode <= StatusCodes.MaxServerError) {
             await this._waitAfterRequestFailure(statusCode, index, this.retryTimeout.INTERNAL_SERVER_ERROR)
