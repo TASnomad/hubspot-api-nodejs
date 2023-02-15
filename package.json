@@ -20,13 +20,13 @@
     "bottleneck": "^2.19.5",
     "es6-promise": "^4.2.4",
     "form-data": "^2.5.0",
-    "node-fetch": "^2.6.0",
-    "@types/node-fetch": "^2.5.7",
+    "node-fetch": "^2.6.7",
     "url-parse": "^1.4.3"
   },
   "devDependencies": {
     "@types/jasmine": "^3.6.2",
     "@types/node": "^12.12.21",
+    "@types/node-fetch": "^2.6.2",
     "@types/url-parse": "1.4.4",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
